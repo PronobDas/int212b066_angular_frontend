@@ -1,0 +1,39 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2>Hospital List</h2>
+  </div>
+  <form [formGroup]="searchForm" (ngSubmit)="OnSubmit(searchForm.value)">
+    <input type="text" id="name" formControlName="name">
+    <button type="submit">Search</button>
+  </form>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>Hospital Id</th>
+        <th>Hospital Name</th>
+        <th>Branch Name</th>
+        <th>Address</th>
+        <th>Email</th>
+        <th>Contact</th>
+        <th>Created On</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let hospital of hospitals | async">
+        <td>{{hospital.hospitalId}}</td>
+        <td>{{hospital.hospitalName}}</td>
+        <td>{{hospital.branchName}}</td>
+        <td>{{hospital.address}}</td>
+        <td>{{hospital.email}}</td>
+        <td>{{hospital.contact}}</td>
+        <td>{{hospital.createdOn}}</td>
+        <td><button (click)="deleteHospital(hospital.hospitalId)" class="btn btn-danger">Delete</button>
+          <button (click)="updateHospital(hospital.hospitalId)" class="btn btn-info" style="margin-left: 10px">Update</button>
+          <button (click)="hospitalDetails(hospital.hospitalId)" class="btn btn-info" style="margin-left: 10px">Details</button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
