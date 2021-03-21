@@ -40,11 +40,11 @@ export class HospitalListComponent implements OnInit {
   }
 
   hospitalDetails(id: string){
-    this.router.navigate(['details', id]);
+    this.router.navigate(['hospitalDetails', id]);
   }
 
   updateHospital(id: string){
-    this.router.navigate(['update', id]);
+    this.router.navigate(['updateHospital', id]);
   }
 
   OnSubmit(searchName){

@@ -11,6 +11,9 @@ import { UpdateTutorialComponent } from './components/tutorial/update-tutorial/u
 import { TutorialListComponent } from './components/tutorial/tutorial-list/tutorial-list.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HospitalListComponent } from './components/hospital/hospital-list/hospital-list.component';
+import { CreateHospitalComponent } from './components/hospital/create-hospital/create-hospital.component';
+import { HospitalDetailsComponent } from './components/hospital/hospital-details/hospital-details.component';
+import { UpdateHospitalComponent } from './components/hospital/update-hospital/update-hospital.component';
 
 
 @NgModule({
@@ -20,7 +23,10 @@ import { HospitalListComponent } from './components/hospital/hospital-list/hospi
     CreateTutorialComponent,
     UpdateTutorialComponent,
     TutorialListComponent,
-    HospitalListComponent
+    HospitalListComponent,
+    CreateHospitalComponent,
+    HospitalDetailsComponent,
+    UpdateHospitalComponent
   ],
     imports: [
         RouterModule,
