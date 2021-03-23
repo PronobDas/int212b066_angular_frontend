@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { HospitalService } from '../../../services/hospital.service';
-import { Hospital } from '../../../classes/Hospital';
+import { Hospital } from '../../../classes/hospital';
 
 @Component({
   selector: 'app-hospital-details',
@@ -19,7 +19,7 @@ export class HospitalDetailsComponent implements OnInit {
   ngOnInit(): void {
     this.hospital = new Hospital();
 
-    this.id = this.route.snapshot.params.id;  // params['id']
+    this.id = this.route.snapshot.params['id'];  // params['id']
 
     this.hospitalService.get(this.id)
       .subscribe(data => {
@@ -30,7 +30,8 @@ export class HospitalDetailsComponent implements OnInit {
   list(){
     this.router.navigate(['hospitals']);
   }
-  updateLink(){
-    this.router.navigate(['updateHospital/' + this.hospital.hospitalId]);
+  updateHospital(){
+    this.router.navigate(['updateHospital', this.id]);
+    // this.router.navigate(['updateHospital/' + id]);
   }
 }

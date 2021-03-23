@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { HospitalService } from '../../../services/hospital.service';
-import { Hospital } from '../../../classes/Hospital';
+import { Hospital } from '../../../classes/hospital';
 
 @Component({
   selector: 'app-create-hospital',

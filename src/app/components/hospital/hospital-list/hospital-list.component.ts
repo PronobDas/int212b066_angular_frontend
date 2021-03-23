@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router} from '@angular/router';
 import { Observable} from 'rxjs';
 import { HospitalService} from '../../../services/hospital.service';
-import { Hospital} from '../../../classes/Hospital';
+import { Hospital} from '../../../classes/hospital';
 import { FormBuilder} from '@angular/forms';
 
 @Component({
@@ -23,6 +23,13 @@ export class HospitalListComponent implements OnInit {
   ngOnInit(): void {
     console.log('Hospital list');
     this.reloadData();
+    // this.hospitalService.getAll().subscribe(
+    //   data => {
+    //     this.hospitals = data;
+    //     console.log(this.hospitals[0]);
+    //     console.log('Hello');
+    //   }
+    // );
   }
   reloadData(){
     this.hospitals = this.hospitalService.getAll();
@@ -40,16 +47,18 @@ export class HospitalListComponent implements OnInit {
   }
 
   hospitalDetails(id: string){
-    this.router.navigate(['hospitalDetails', id]);
+     this.router.navigate(['hospitalDetails', id]);
+    // this.router.navigate(['hospitalDetails/' + id]);
   }
 
   updateHospital(id: string){
     this.router.navigate(['updateHospital', id]);
+    // this.router.navigate(['updateHospital/' + id]);
   }
 
   OnSubmit(searchName){
     console.log('Search name:');
-    console.log(searchName.name);
-    this.hospitals = this.hospitalService.findByHospitalName(searchName.name);
+    console.log(searchName.hospitalName);
+    this.hospitals = this.hospitalService.findByHospitalName(searchName.hospitalName);
   }
 }

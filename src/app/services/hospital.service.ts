@@ -35,6 +35,10 @@ export class HospitalService {
     return this.http.delete(baseUrl);
   }
 
+  findByHospitalId(hospitalId: string): Observable<any> {
+    return this.http.get(`${baseUrl}/id/${hospitalId}`);
+  }
+
   findByHospitalName(hospitalName: string): Observable<any> {
     return this.http.get(`${baseUrl}/name/${hospitalName}`);
   }

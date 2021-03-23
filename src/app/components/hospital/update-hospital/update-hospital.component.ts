@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { HospitalService } from '../../../services/hospital.service';
-import { Hospital } from '../../../classes/Hospital';
+import { Hospital } from '../../../classes/hospital';
 
 @Component({
   selector: 'app-update-hospital',

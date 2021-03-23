@@ -9,7 +9,7 @@ import { TutorialDetailsComponent } from './components/tutorial/tutorial-details
 import { CreateTutorialComponent } from './components/tutorial/create-tutorial/create-tutorial.component';
 import { UpdateTutorialComponent } from './components/tutorial/update-tutorial/update-tutorial.component';
 import { TutorialListComponent } from './components/tutorial/tutorial-list/tutorial-list.component';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HospitalListComponent } from './components/hospital/hospital-list/hospital-list.component';
 import { CreateHospitalComponent } from './components/hospital/create-hospital/create-hospital.component';
 import { HospitalDetailsComponent } from './components/hospital/hospital-details/hospital-details.component';
