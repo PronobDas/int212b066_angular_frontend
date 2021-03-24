@@ -14,6 +14,10 @@ import { HospitalListComponent } from './components/hospital/hospital-list/hospi
 import { CreateHospitalComponent } from './components/hospital/create-hospital/create-hospital.component';
 import { HospitalDetailsComponent } from './components/hospital/hospital-details/hospital-details.component';
 import { UpdateHospitalComponent } from './components/hospital/update-hospital/update-hospital.component';
+import { PatientListComponent } from './components/patient/patient-list/patient-list.component';
+import { PatientDetailsComponent } from './components/patient/patient-details/patient-details.component';
+import { UpdatePatientComponent } from './components/patient/update-patient/update-patient.component';
+import { CreatePatientComponent } from './components/patient/create-patient/create-patient.component';
 
 
 @NgModule({
@@ -26,7 +30,11 @@ import { UpdateHospitalComponent } from './components/hospital/update-hospital/u
     HospitalListComponent,
     CreateHospitalComponent,
     HospitalDetailsComponent,
-    UpdateHospitalComponent
+    UpdateHospitalComponent,
+    PatientListComponent,
+    PatientDetailsComponent,
+    UpdatePatientComponent,
+    CreatePatientComponent
   ],
     imports: [
         RouterModule,

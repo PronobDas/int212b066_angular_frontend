@@ -1,0 +1,95 @@
+<div class="row row justify-content-center align-self-center">
+  <div style="width: 400px;" >
+    <h3>Update Hospital</h3>
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="regId">Registration Id</label>
+        <input type="text" class="form-control" id="regId" required [(ngModel)]="patient.regId" name="regId">
+      </div>
+
+      <div class="form-group">
+        <label for="regDatetime">Registration Date and time</label>
+        <input type="text" class="form-control" id="regDatetime" required [(ngModel)]="patient.regDatetime" name="regDatetime">
+      </div>
+
+      <div class="form-group">
+        <label for="doctorId">Doctor Id</label>
+        <input type="text" class="form-control" id="doctorId" required [(ngModel)]="patient.doctorId" name="doctorId">
+      </div>
+
+      <div class="form-group">
+        <label for="hospitalId">Hospital Id</label>
+        <input type="text" class="form-control" id="hospitalId" required [(ngModel)]="patient.hospitalId" name="hospitalId">
+      </div>
+
+      <div class="form-group">
+        <label for="upi">UPI</label>
+        <input type="text" class="form-control" id="upi" required [(ngModel)]="patient.upi" name="upi">
+      </div>
+
+      <div class="form-group">
+        <label for="patientName">Patient Name</label>
+        <input type="text" class="form-control" id="patientName" required [(ngModel)]="patient.patientName" name="patientName">
+      </div>
+
+      <div class="form-group">
+        <label for="dateOfBirth">Date Of Birth</label>
+        <input type="text" class="form-control" id="dateOfBirth" required [(ngModel)]="patient.dateOfBirth" name="dateOfBirth">
+      </div>
+
+      <div class="form-group">
+        <label for="age">Age</label>
+        <input type="text" class="form-control" id="age" required [(ngModel)]="patient.age" name="age">
+      </div>
+
+      <div class="form-group">
+        <label for="gender">Gender</label>
+        <input type="text" class="form-control" id="gender" required [(ngModel)]="patient.gender" name="gender">
+      </div>
+
+      <div class="form-group">
+        <label for="occupation">Occupation</label>
+        <input type="text" class="form-control" id="occupation" required [(ngModel)]="patient.occupation" name="occupation">
+      </div>
+
+      <div class="form-group">
+        <label for="healthInsuranceNo">Health Insurance No</label>
+        <input type="text" class="form-control" id="healthInsuranceNo" required [(ngModel)]="patient.healthInsuranceNo" name="healthInsuranceNo">
+      </div>
+
+      <div class="form-group">
+        <label for="healthCareProvider">Health Care Provider</label>
+        <input type="text" class="form-control" id="healthCareProvider" required [(ngModel)]="patient.healthCareProvider" name="healthCareProvider">
+      </div>
+
+      <div class="form-group">
+        <label for="address">Address</label>
+        <input type="text" class="form-control" id="address" required [(ngModel)]="patient.address" name="address">
+      </div>
+
+      <div class="form-group">
+        <label for="contactNo">Contact No</label>
+        <input type="text" class="form-control" id="contactNo" required [(ngModel)]="patient.contactNo" name="contactNo">
+      </div>
+
+      <div class="form-group">
+        <label for="createdOn">Created On</label>
+        <input type="text" class="form-control" id="createdOn" required [(ngModel)]="patient.createdOn" name="createdOn">
+      </div>
+
+<!--      <div class="form-group">-->
+<!--        <label for="name">Published?</label><br>-->
+<!--        <input type="radio"  id="true" [(ngModel)]="tutorial.published" name="published" value=true>-->
+<!--        <label for="true">True</label><br>-->
+<!--        <input type="radio" id="false" [(ngModel)]="tutorial.published" value=false name="published">-->
+<!--        <label for="false">False</label><br>-->
+<!--      </div>-->
+
+
+      <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+    <br>
+    <button (click)="list()" class="btn btn-primary">Back to Patient List</button><br>
+  </div>
+</div>
+

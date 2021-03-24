@@ -1,0 +1,55 @@
+<div class="row row justify-content-center align-self-center">
+  <div style="width: 400px;" *ngIf="patient">
+    <h2>Patient Details</h2>
+    <div>
+      <label><b>Registration Id: </b></label> {{patient.regId}}
+    </div>
+    <div>
+      <label><b>Registration Date and Time: </b></label> {{patient.regDatetime}}
+    </div>
+    <div>
+      <label><b>Doctor Id: </b></label> {{patient.doctorId}}
+    </div>
+    <div>
+      <label><b>Hospital Id: </b></label> {{patient.hospitalId}}
+    </div>
+    <div>
+      <label><b>UPI: </b></label> {{patient.upi}}
+    </div>
+    <div>
+      <label><b>Patient Name: </b></label> {{patient.patientName}}
+    </div>
+    <div>
+      <label><b>Date of Birth: </b></label> {{patient.dateOfBirth}}
+    </div>
+    <div>
+      <label><b>Age: </b></label> {{patient.age}}
+    </div>
+    <div>
+      <label><b>Gender: </b></label> {{patient.gender}}
+    </div>
+    <div>
+      <label><b>Occupation: </b></label> {{patient.occupation}}
+    </div>
+    <div>
+      <label><b>Health Insureance No: </b></label> {{patient.healthInsuranceNo}}
+    </div>
+    <div>
+      <label><b>Health Care Provider: </b></label> {{patient.healthCareProvider}}
+    </div>
+    <div>
+      <label><b>Address: </b></label> {{patient.address}}
+    </div>
+    <div>
+      <label><b>Contact No: </b></label> {{patient.contactNo}}
+    </div>
+    <div>
+      <label><b>Created On: </b></label> {{patient.createdOn}}
+    </div>
+
+    <br>
+    <br>
+    <button (click)="updatePatient()" class="btn btn-info">Update</button> <span></span>
+    <button (click)="list()" class="btn btn-primary">Back to Patient List</button><br>
+  </div>
+</div>

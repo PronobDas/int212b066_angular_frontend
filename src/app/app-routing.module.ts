@@ -8,6 +8,10 @@ import { HospitalListComponent } from './components/hospital/hospital-list/hospi
 import { CreateHospitalComponent } from './components/hospital/create-hospital/create-hospital.component';
 import { HospitalDetailsComponent } from './components/hospital/hospital-details/hospital-details.component';
 import { UpdateHospitalComponent } from './components/hospital/update-hospital/update-hospital.component';
+import { PatientListComponent } from './components/patient/patient-list/patient-list.component';
+import { CreatePatientComponent } from './components/patient/create-patient/create-patient.component';
+import { PatientDetailsComponent } from './components/patient/patient-details/patient-details.component';
+import { UpdatePatientComponent } from './components/patient/update-patient/update-patient.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'tutorial', pathMatch: 'full' },
@@ -18,7 +22,11 @@ const routes: Routes = [
   { path: 'hospitals', component: HospitalListComponent},
   { path: 'createHospital', component: CreateHospitalComponent},
   { path: 'hospitalDetails/:id', component: HospitalDetailsComponent},
-  { path: 'updateHospital/:id', component: UpdateHospitalComponent}
+  { path: 'updateHospital/:id', component: UpdateHospitalComponent},
+  { path: 'patients', component: PatientListComponent},
+  { path: 'createPatient', component: CreatePatientComponent},
+  { path: 'patientDetails/:id', component: PatientDetailsComponent},
+  { path: 'updatePatient/:id', component: UpdatePatientComponent}
 ];
 
 @NgModule({

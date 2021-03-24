@@ -1,18 +1,18 @@
 <div class="panel panel-primary">
   <div class="panel-heading">
-    <h2>Hospital List</h2>
+    <h2>Patient List</h2>
   </div>
   <form [formGroup]="searchForm" (ngSubmit)="OnSubmit(searchForm.value)">
-    <input type="text" id="name" formControlName="hospitalName">
+    <input type="text" id="name" formControlName="patientName">
     <button type="submit">Search</button>
   </form>
   <div class="panel-body">
     <table class="table table-striped">
       <thead>
       <tr>
-        <th>Hospital Id</th>
-        <th>Hospital Name</th>
-        <th>Branch Name</th>
+        <th>Patient Id</th>
+        <th>Patient Name</th>
+        <th>Address</th>
 <!--        <th>Address</th>-->
 <!--        <th>Email</th>-->
 <!--        <th>Contact</th>-->
@@ -20,18 +20,18 @@
       </tr>
       </thead>
       <tbody>
-      <tr *ngFor="let hospital of hospitals | async">
-        <td>{{hospital.hospitalId}}</td>
-        <td>{{hospital.hospitalName}}</td>
-        <td>{{hospital.branchName}}</td>
+      <tr *ngFor="let patient of patients | async">
+        <td>{{patient.upi}}</td>
+        <td>{{patient.patientName}}</td>
+        <td>{{patient.address}}</td>
 <!--        <td>{{hospital.address}}</td>-->
 <!--        <td>{{hospital.email}}</td>-->
 <!--        <td>{{hospital.contact}}</td>-->
 <!--        <td>{{hospital.createdOn}}</td>-->
         <td>
 <!--          <button (click)="updateHospital(hospital.hospitalId)" class="btn btn-info" style="margin-left: 10px">Update</button>-->
-          <button (click)="hospitalDetails(hospital.hospitalId)" class="btn btn-info" style="margin-left: 10px">Details</button>
-          <button (click)="deleteHospital(hospital.hospitalId)" class="btn btn-danger">Delete</button>
+          <button (click)="patientDetails(patient.upi)" class="btn btn-info" style="margin-left: 10px">Details</button>
+          <button (click)="deletePatient(patient.upi)" class="btn btn-danger">Delete</button>
         </td>
       </tr>
       </tbody>
